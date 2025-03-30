@@ -13,18 +13,18 @@
 {9}{Divine Magick}
 {10}{Vitality of Air}
 {11}{Poison Vapours}
-{12}{Call Winds}
+{12}{Whirlwind}
 {13}{Body of Air}
 {14}{Call Air Elemental}
-{15}{Strength of Earth}
+{15}{Skin of Stone}
 {16}{Stone Throw}
-{17}{Wall of Stone}
-{18}{Body of Stone}
-{19}{Call Earth Elemental}
-{20}{Agility of Fire}
-{21}{Wall of Fire}
+{17}{Earthshatter}
+{18}{Seismic Leap}
+{19}{Anvil of the Gods}
+{20}{Fire Surge}
+{21}{Fiery Shift}
 {22}{Fireflash}
-{23}{Body of Fire}
+{23}{Sea of Flames}
 {24}{Call Fire Elemental}
 {25}{Purity of Water}
 {26}{Call Fog}
@@ -33,7 +33,7 @@
 {29}{Call Water Elemental}
 {30}{Shield of Protection}
 {31}{Jolt}
-{32}{Wall of Force}
+{32}{Electric Discharge}
 {33}{Bolt of Lightning}
 {34}{Disintegrate}
 {35}{Charm}
@@ -46,11 +46,11 @@
 {42}{Dweomer Shield}
 {43}{Bonds of Magick}
 {44}{Reflection Shield}
-{45}{Hardened Hands}
-{46}{Weaken}
-{47}{Shrink}
-{48}{Flesh to Stone}
-{49}{Polymorph}
+{45}{Qi Armor}
+{46}{Qi Strike}
+{47}{Fists of Steel}
+{48}{TBA}
+{49}{Body Ascendance}
 {50}{Charm Beast}
 {51}{Entangle}
 {52}{Control Beast}
@@ -71,9 +71,9 @@
 {67}{Blur Sight}
 {68}{Phantasmal Fiend}
 {69}{Invisibility}
-{70}{Plague of Insects}
-{71}{Orcish Champion}
-{72}{Guardian Ogre}
+{70}{Crimson Tiger's Roar}
+{71}{Demonic Armor}
+{72}{Infernal Tiger's Fury}
 {73}{Hellgate}
 {74}{Familiar}
 {75}{Magelock}
@@ -90,8 +90,8 @@
 // Three asterisks ("***") mean that it *really* doesn't work, one ("*") means it is just
 //   somewhat broken.  No stars means that it *should* be working.  ;)
 // "Passive" means that the spell only triggers when the item it is attached to wishes it.
-{80}{MI: Regeneration ***}
-{81}{MI: Drain Life ***}
+{80}{MI: UNUSED} Regeneration ***
+{81}{MI: UNUSED} Drain Life ***
 {82}{MI: Fire Shield (Passive: Parent Damaged)}
 {83}{MI: Shield (Duration)}
 {84}{MI: Invisibility}
@@ -101,29 +101,29 @@
 {88}{MI: SnakeForm (Script Spell)}
 {89}{MI: Earthquake (Passive: Parent Attacks Target)}
 {90}{MI: Harm Undead}
-{91}{MI: Area Fear Undead ***}
+{91}{MI: UNUSED} Area Fear Undead ***
 {92}{MI: Holy Smiting}
 {93}{MI: Slaying Strength (Passive: Parent Atks or Hit by Target)}
 {94}{MI: Hammer of the Earth (Passive: Wield)}
 {95}{MI: Axe of the Winds (Passive: Wield)}
 {96}{MI: Dagger of Pain (Passive: Wield)}
-{97}{MI: Animate Corpse ***}
-{98}{MI: Spell Breaker ***}
-{99}{MI: Bashing ***}
-{100}{MI: LifeWard *}
-{101}{MI: Chain Lightning ***}
-{102}{MI: Greater Healing ***}
-{103}{MI: Life Steal *}
-{104}{MI: Mind Warp ***}
+{97}{MI: UNUSED} Animate Corpse ***
+{98}{MI: UNUSED} Spell Breaker ***
+{99}{MI: UNUSED} Bashing ***
+{100}{MI: UNUSED} LifeWard *
+{101}{MI: UNUSED} Chain Lightning ***
+{102}{MI: UNUSED} Greater Healing ***
+{103}{MI: UNUSED} Life Steal *
+{104}{MI: UNUSED} Mind Warp ***
 {105}{MI: Unrevivifiable Undead}
-{106}{MI: Area Fear ***}
-{107}{MI: Area Fatigue ***}
-{108}{MI: Area Fear (Animals) ***}
-{109}{MI: Area Reanimate *}
-{110}{MI: Wolf Form ***}
-{111}{MI: Returning ***}
+{106}{MI: UNUSED} Area Fear ***
+{107}{MI: UNUSED} Area Fatigue ***
+{108}{MI: UNUSED} Area Fear (Animals) ***
+{109}{MI: UNUSED} Area Reanimate *
+{110}{MI: UNUSED} Wolf Form ***
+{111}{MI: UNUSED} Returning ***
 {112}{MI: Staff of the Necromancer}
-{113}{MI: Paralyze (Evil) ***}
+{113}{MI: UNUSED} Paralyze (Evil) ***
 {114}{MI: Elven Perfume}
 {115}{MI: Heal Light (Will 'O Wisp)}
 {116}{MI: Pad Lighting1 (NOT A SPELL)}
@@ -139,9 +139,9 @@
 {125}{MI: Summon Wargun}
 {126}{MI: Summon Baleful Hound}
 {127}{MI: Flesh-To-Stone (Duration)}
-{128}{MI: Slow Party ***}
-{129}{MI: Poison DOT ***}
-{130}{MI: Fatigue DOT ***}
+{128}{MI: UNUSED} Slow Party ***
+{129}{MI: UNUSED} Poison DOT ***
+{130}{MI: UNUSED} Fatigue DOT ***
 {131}{MI: Call Winds (All)}
 {132}{MI: Unseen Force (All)}
 {133}{MI: Stasis (Duration)}
@@ -259,12 +259,12 @@
 {506}{Force}
 {507}{Mental}
 {508}{Meta}
-{509}{Morph}
+{509}{Qi Control}
 {510}{Nature}
 {511}{Necromantic black}
 {512}{Necromantic white}
 {513}{Phantasm}
-{514}{Summoning}
+{514}{Demonic}
 {515}{Temporal}
 
 //
@@ -296,15 +296,15 @@
 {712}{This spell creates a gust of wind, centered on the caster and blowing away in all directions.}
 {713}{This spell transforms the target's body into air, making him translucent, immaterial and capable of floating.}
 {714}{This spell summons an Air Elemental, who will appear in the target tile and immediately attack the caster's enemies.}
-{715}{This spell raises the Strength of the target creature.}
+{715}{The caster strengthens their skin with stone, making their body temporarily as tough as a boulder.}
 {716}{This spell creates a stone missile that unerringly travels from the caster to the target.}
-{717}{This spell creates a block of stone in the empty tile indicated by the caster.}
-{718}{This spell transforms the target into stone. He gains damage resistance and extra damage but Speed is reduced.}
-{719}{This spell summons an Earth Elemental, who will appear in the target tile and immediately attack the caster's enemies.}
-{720}{This spell raises the Dexterity of the target creature.}
-{721}{This spell creates a wall of fire across the specified empty tile.}
+{717}{The caster slams the ground, sending a shockwave that knockdowns and cripples surrounding enemies.}
+{718}{The caster leaps to target location. Upon landing sends a shockwave that knockdowns nearby enemies and deals damage.}
+{719}{This spell summons a massive tombstone that crushes the target.}
+{720}{Flames flow through the caster's body, enhancing their fist damage and speed. Attackers take fire dmg.}
+{721}{The caster burns distant enemies and then shifts their location to the burning flames.}
 {722}{This spell creates a ball of superheated plasma, which streaks to the specified tile and explodes.}
-{723}{This spell immolates the target creature, who gains fire resistance and extra fire damage with any unarmed attack.}
+{723}{This spell creates a great sea of flames at target area.}
 {724}{This spell summons a Fire Elemental, who will appear in the target tile and immediately attack the caster's enemies.}
 {725}{This spell raises the Beauty of the target creature.}
 {726}{This spell creates a billowing mist, centered on the target tile.}
@@ -313,7 +313,7 @@
 {729}{This spell summons a Water Elemental, who will appear in the target tile and immediately attack the caster's enemies.}
 {730}{This spell creates a deflective energy screen about the target, increasing its armor class and resistances.}
 {731}{This spell causes a surge of electricity to flow into all creatures within very close range.}
-{732}{This spell creates a shimmering wall of force in the specified empty square.}
+{732}{This spell causes a greater surge of electricity to flow into all creatures within close range.}
 {733}{This spell creates a bolt of lightning from the caster to the target creature.}
 {734}{This spell eliminates the binding force between atoms, dispersing the target as constituent particles.}
 {735}{This spell causes the target to be friendly towards the caster, if a save is not made.}
@@ -326,11 +326,11 @@
 {742}{This spell prevents magick from operating on the target.}
 {743}{This spell prevents the target creature from casting any spells.}
 {744}{The caster is surrounded by a barrier which causes any spell to be reflected back to its caster, at additional cost.}
-{745}{This spell makes the hands of the target creature do more damage.}
-{746}{This spell weakens the substance of the target, reducing its damage resistance for the duration of the spell.}
-{747}{This spell reduces a creature to half its size.}
-{748}{This spell converts flesh to stone temporarily.}
-{749}{This spell transforms the target creature into a sheep for as long as the spell is maintained. }
+{745}{This spells creates a nimble armor of Qi around the caster. Increasing their AC and Dodge skill.}
+{746}{This spells shoots out a ball of energy, damaging and pushing away enemies.}
+{747}{The caster strengthens their muscles and bones with dense Qi, making their body temporarily as tough as iron.}
+{748}{This spell casts a whirlwind of energy around the caster.}
+{749}{The caster transcends their physical form, exchanging max health for increased max fatigue. }
 {750}{This spell causes every animal in the vicinity to gain a Good reaction to the player.}
 {751}{This spell imbues a patch of vegetation with motion preventing the target creature from walking.}
 {752}{This spell places the mind of the animal under the control of the caster, unless a saving throw is made. }
@@ -351,9 +351,9 @@
 {767}{This spell makes the caster harder to see and to be hit.}
 {768}{This spell creates the illusion of a formidable monster.}
 {769}{The target becomes invisible except when attacking.}
-{770}{This spell summons a swarm of insects, which surrounds and slows the target creature.}
-{771}{This spell summons an orc into the specified empty square.}
-{772}{This spell summons an ogre into the specified empty square.}
+{770}{The Caster unleashes a tigers roar, stunning surrounding enemies and dealing light fatigue damage.}
+{771}{This spell summons a giant Demonic Armor.}
+{772}{The Caster unleashes a demonic tiger's wrath to strike surrounding enemies.}
 {773}{This spell summons a demon into the specified empty square.}
 {774}{This spell summons a familiar for the caster.}
 {775}{This spell locks any portal. The door or window cannot be lockpicked.}
@@ -533,7 +533,7 @@
 {8006}{The College of Force contains spells that manipulate and direct pure energy.}
 {8007}{The Mental College contains spells that influence and control the minds of their targets. }
 {8008}{The Meta College contains spells that affect other spells.}
-{8009}{The Morph College contains spells that change the substance of the target.}
+{8009}{The College of Qi Resonance is dedicated to the mastery and cultivation of internal energy to enhance both body and spirit.}
 {8010}{The College of Nature contains spells that control plants, animals, and natural forces.}
 {8011}{The Black Necromantic College contains spells that negatively affect the life force of a creature.}
 {8012}{The White Necromantic College contains spells that positively affect the life force of a creature.}
@@ -553,7 +553,7 @@
 {9006}{You are the Master of all spells that manipulate and direct pure energy.}
 {9007}{You are the Master of all spells that influence and control the minds of their targets. }
 {9008}{You are the Master of all spells that affect other spells.}
-{9009}{You are the Master of all spells that change the substance of the target.}
+{9009}{You are the Master of all spells that affect your internal energy.}
 {9010}{You are the Master of all spells that control plants, animals, and natural forces.}
 {9011}{You are the Master of all spells that negatively affect the life force of a creature.}
 {9012}{You are the Master of all spells that positively affect the life force of a creature.}

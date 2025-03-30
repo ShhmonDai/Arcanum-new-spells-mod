@@ -129,11 +129,11 @@
 {113}{Art: 55, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}	// Secondary Destination
 {114}{}	// Secondary Casting
 
-// 12 -- Call Winds
-{120}{Art: 68, Palette: 1, Scale: 100%, Blend: Add, Sound: 11030, Flags: overlay_f | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
+// 12 -- Whirlwind
+{120}{Art:47, Palette: 1, Scale: 75%, Blend: Add, Sound: 11000, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {121}{}	// Projectile
-{122}{Art: 48, Palette: 1, Scale: 100%, Blend: Add, Sound: 11035, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
-{123}{}	// Secondary Destination
+{122}{Art:48, Palette: 1, Scale: 50%, Blend: Add, Sound: 11015, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
+{123}{Art: 48, Palette: 1, Scale: 150%, Blend: Add, Sound: 8827, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Destination
 {124}{}	// Secondary Casting
 
 // 13 -- Body of Air
@@ -153,72 +153,74 @@
 
 // College: [Earth] ------
 
-// 15 -- Strength of Earth
-{150}{Art: 69, Palette: 1, Scale: 75%, Blend: Add, Sound: 12010, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Cast
+
+// 15 -- Skin of Stone
+{150}{}	// Cast
 {151}{}	// Projectile
-{152}{Art: 363, Palette: 1, Scale: 100%, Blend: Add, Sound: 12015, Flags: overlay_f | animates | anim_forever}	// Destination
+{152}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Destination
 {153}{}	// Secondary Destination
 {154}{}	// Secondary Casting
 
 // 16 -- Stone Throw
 {160}{Art: 90, Palette: 1, Scale: 75%, Blend: Add, Sound: 12020, Flags: overlay_f | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Cast
-{161}{Art: 70, Palette: 1, Scale: 75%, Blend: Add, Sound: 12024, Flags: overlay_f | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Projectile
+{161}{Art: 70, Palette: 1, Scale: 200%, Blend: Add, Sound: 12024, Flags: overlay_f | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Projectile
 {162}{Art: 74, Palette: 1, Scale: 100%, Blend: None, Sound: 12025, Flags: overlay_f | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Destination
-{163}{}	// Secondary Destination
+{163}{Art: 2, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}	// Secondary Destination
 {164}{}	// Secondary Casting
 
-// 17 -- Wall of Stone
-{170}{Art: 90, Palette: 1, Scale: 100%, Blend: Add, Sound: 12030, Flags: overlay_f | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Cast
+// 17 -- Earthquake Slam
+{170}{Art: 47, Palette: 1, Scale: 25%, Blend: Add, Sound: 12058, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {171}{}	// Projectile
-{172}{Art: 76, Palette: 1, Scale: 100%, Blend: None, Sound: 12035, Flags: overlay_f | animates, Light: 1, Light Color:  (0 @ 96 @ 204)}	// Destination
-{173}{Art: 77, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_f | animates | anim_forever}	// Secondary Destination
-{174}{}	// Secondary Casting
+{172}{Art: 369, Palette: 2, Scale: 150%, Blend: Add, Sound: 8507, Flags: overlay_f | animates, Light: 3, Light Color:   (242 @ 165 @ 0)}// Destination   8808 generic explosion, 8507 engine explosion
+{173}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
+{174}{Art: 47, Palette: 1, Scale: 25%, Blend: Add, Sound: 11025, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Casting
 
-// 18 -- Body of Stone
-{180}{Art: 69, Palette: 1, Scale: 100%, Blend: Add, Sound: 12040, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Cast
+// 18 -- Leaping Smash
+{180}{Art: 382, Palette: 2, Scale: 50%, Blend: Add, Sound: 12055, Flags: overlay_f | animates, Light: 3, Light Color:   (242 @ 165 @ 0)}	// Cast
 {181}{}	// Projectile
-{182}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12045, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Destination
-{183}{}	// Secondary Destination
-{184}{}	// Secondary Casting
+{182}{Art: 369, Palette: 1, Scale: 100%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Destination
+{183}{Art: 369, Palette: 1, Scale: 50%, Blend: Add, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
+{184}{Sound: 8808}	// Secondary Casting
 
-// 19 -- Call Earth Elemental
-{190}{Art: 69, Palette: 1, Scale: 125%, Blend: Add, Sound: 12050, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Cast
+// 19 -- Anvil of the Gods
+{190}{Sound: 8507}	// Cast
 {191}{}	// Projectile
-{192}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 1, Light Color:  (201 @ 164 @ 64)}	// Destination
-{193}{}	// Secondary Destination
-{194}{}	// Secondary Casting
+{192}{Art: 382, Palette: 2, Scale: 50%, Blend: Add, Sound: 12055, Flags: overlay_f | animates, Light: 3, Light Color:   (242 @ 165 @ 0)}// Destination	// Destination 12055
+{193}{Art: 369, Palette: 1, Scale: 150%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination 85
+{194}{Sound: 20055}	// Secondary Casting
 
 
 // College: [Fire] ------
 
-// 20 -- Agility of Fire
-{200}{Art: 91, Palette: 1, Scale: 75%, Blend: Add, Sound: 13010, Flags: overlay_fb | animates, Light: 1, Light Color:  (242 @ 165 @ 0)}	// Cast
+// 20 -- Fire Surge
+{200}{Art: 47, Palette: 1, Scale: 50%, Blend: Add, Sound: 493, Flags: overlay_fb | animates, Light: 1}	// Cast
 {201}{}	// Projectile
-{202}{Art: 364, Palette: 1, Scale: 100%, Blend: Add, Sound: 13015, Flags: overlay_f | animates | anim_forever}	// Destination
-{203}{}	// Secondary Destination
-{204}{}	// Secondary Casting
+{202}{Art: 92, Palette: 1, Scale: 100%, Blend: Add, Sound: 13020, Flags: overlay_fb | animates, Light: 9, Light Color:  (242 @ 165 @ 0)}	// Destination
+{203}{Art: 93, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 9, Light Color:  (242 @ 165 @ 0)}	// Secondary Destination
+{204}{Art: 91, Palette: 1, Scale: 75%, Blend: Add, Sound: 13040, Flags: overlay_fb | animates, Light: 9, Light Color:   (242 @ 165 @ 0)}	// Secondary Casting
 
-// 21 -- Wall of Fire
-{210}{Art: 114, Palette: 1, Scale: 75%, Blend: Add, Sound: 13020, Flags: overlay_f | animates, Light: 1, Light Color:  (242 @ 165 @ 0)}	// Cast
+// 21 -- Fiery Shift
+{210}{Art: 95, Palette: 1, Scale: 75%, Blend: Add, Sound: 13020, Flags: overlay_f | animates, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Cast Art114
 {211}{}	// Projectile
-{212}{Art: 95, Palette: 1, Scale: 100%, Blend: Add, Sound: 13025, Flags: overlay_fb | animates, Light: 1, Light Color:  (0 @ 96 @ 204)}	// Destination
-{213}{Art: 96, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 1, Light Color:  (0 @ 96 @ 204)}	// Secondary Destination
+{212}{Art: 95, Palette: 1, Scale: 100%, Blend: Add, Sound: 13025, Flags: overlay_fb | animates, Light: 2, Light Color:  (0 @ 96 @ 204)}	// Destination
+{213}{Art: 96, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 2, Light Color:  (0 @ 96 @ 204)}	// Secondary Destination
 {214}{}	// Secondary Casting
 
 // 22 -- Fireflash
 {220}{Art: 114, Palette: 1, Scale: 100%, Blend: Add, Sound: 13030, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Cast
-{221}{Art: 99, Palette: 1, Scale: 100%, Blend: Add, Sound: 13034, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0), Proj Speed: 4}	// Projectile
-{222}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 13035, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Destination
+{221}{Art: 99, Palette: 1, Scale: 200%, Blend: Add, Sound: 13034, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0), Proj Speed: 2}	// Projectile
+{222}{Art: 350, Palette: 1, Scale: 100%, Blend: Add, Sound: 13035, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Destination
 // Smoke Effect: Note that this is used from code in several places, so if this changes, need to change there TOO!
 {223}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}	// Secondary Destination
 {224}{}			// Secondary Casting
 
-// 23 -- Body of Fire
-{230}{Art: 91, Palette: 1, Scale: 125%, Blend: Add, Sound: 13040, Flags: overlay_fb | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Cast
+// 23 -- Sea of Flames
+{230}{Art: 91, Palette: 1, Scale: 75%, Blend: Add, Sound: 13034, Flags: overlay_fb | animates, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Cast
 {231}{}	// Projectile
-{232}{Art: 105, Palette: 1, Scale: 100%, Blend: Add, Sound: 13045, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Destination
-{233}{}	// Secondary Destination
+{232}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 13025, Flags: overlay_f | animates, Light: 3, Light Color:  (242 @ 165 @ 0)}	// Destination
+{233}{Art: 98, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Secondary Destination
 {234}{}	// Secondary Casting
+
 
 // 24 -- Call Fire Elemental
 {240}{Art: 91, Palette: 1, Scale: 150%, Blend: Add, Sound: 13050, Flags: overlay_fb | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Cast
@@ -283,12 +285,12 @@
 {313}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}	// Secondary Destination
 {314}{}	// Secondary Casting
 
-// 32 -- Wall of Force
-{320}{Art: 159, Palette: 1, Scale: 100%, Blend: Add, Sound: 15030, Flags: overlay_f | animates, Light: 1}	// Cast
-{321}{}	// Projectile
-{322}{Art: 143, Palette: 1, Scale: 100%, Blend: Add, Sound: 15035,  Flags: overlay_f | animates, Light: 1, Light Color:  (255 @ 255 @ 255)}	// Destination
-{323}{Art: 144, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color:  (255 @ 255 @ 255)}	// Secondary Destination
-{324}{}	// Secondary Casting
+// 32 -- Electric Discharge
+{320}{Art: 154, Palette: 1, Scale: 100%, Blend: Add, Sound: 15054, Flags: overlay_f | animates, Light: 8} // Cast
+{321}{Sound: 13020}	// Projectile
+{322}{Art: 158, Palette: 1, Scale: 125%, Blend: Add, Sound: 15055, Flags: overlay_f | animates, Light: 8} // Destination
+{323}{Art: 47, Palette: 1, Scale: 125%, Blend: Add, Sound: 11040, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Destination
+{324}{Art: 150, Palette: 1, Scale: 125%, Blend: Add, Sound: 15045, Flags: overlay_fb | animates, Light: 8}	// Secondary Casting
 
 // 33 -- Bolt of Lightning
 {330}{Art: 159, Palette: 1, Scale: 125%, Blend: Add, Sound: 15040, Flags: overlay_f | animates, Light: 1}	// Cast
@@ -381,41 +383,42 @@
 {444}{}	// Secondary Casting
 
 
-// College: [Morph] ------
+// College: [Qi Manipulation] ------
 
-// 45 -- Hardened Hands
-{450}{Art: 195, Palette: 1, Scale: 75%, Blend: Add, Sound: 18010, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Cast
+// 45 -- Qi Armor
+{450}{Sound: 23030}	// Cast
 {451}{}	// Projectile
-{452}{}	// Destination
-{453}{}	// Secondary Destination
-{454}{}	// Secondary Casting
+{452}{}		// Destination
+{453}{Art: 428, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color:   (50 @ 50 @ 255)}	// Secondary Destination
+{454}{}	// Secondary Casting	// Secondary Casting
 
-// 46 -- Weaken
-{460}{Art: 195, Palette: 1, Scale: 75%, Blend: Add, Sound: 18020, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Cast
-{461}{}	// Projectile
-{462}{Art: 196, Palette: 1, Scale: 100%, Blend: Add, Sound: 18025, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Destination
-{463}{Art: 196, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}	// Secondary Destination
-{464}{}	// Secondary Casting
+// 46 -- Qi Strike
+{460}{Art:47, Palette: 1, Scale: 50%, Blend: Add, Sound: 13028, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
+{461}{Art: 154, Palette: 1, Scale: 100%, Blend: Add, Sound: 13034, Flags: overlay_f | animates, Light: 8}	// Projectile
+{462}{Art: 48, Palette: 1, Scale: 50%, Blend: Add, Sound: 15038, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}// Destination
+{463}{Art: 150, Palette: 1, Scale: 50%, Blend: Add, Sound: 13025, Flags: overlay_fb | animates, Light: 8}	// Secondary Destination
+{464}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}// Secondary Casting
 
-// 47 -- Shrink
-{470}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18040, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Cast
+// 47 -- Fists
+{470}{}	// Cast
 {471}{}	// Projectile
-{472}{Art: 205, Palette: 1, Scale: 100%, Blend: Add, Sound: 18045, Flags: overlay_f | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Destination
+{472}{Art: 259, Palette: 1, Scale: 100%, Blend: Add, Sound: 21035, Flags: overlay_fb | animates, Light: 1, Light Color:  (27 @ 183 @ 255)}		// Destination
 {473}{}	// Secondary Destination
 {474}{}	// Secondary Casting
 
-// 48 -- Flesh to Stone
-{480}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18030, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Cast
+// 48 -- Jump
+{480}{Art: 396, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}	// Cast
 {481}{}	// Projectile
-{482}{Art: 202, Palette: 1, Scale: 100%, Blend: Add, Sound: 18035, Flags: overlay_f | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Destination
-{483}{}	// Secondary Destination
-{484}{}	// Secondary Casting
+{482}{Art: 369, Palette: 1, Scale: 100%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Destination
+{483}{Art: 369, Palette: 1, Scale: 50%, Blend: Add, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
+{484}{Sound: 8808}	// Secondary Casting
 
-// 49 -- Polymorph Other
-{490}{Art: 195, Palette: 1, Scale: 125%, Blend: Add, Sound: 18050, Flags: overlay_fb | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Cast
+
+// 49 -- Body Ascendance
+{490}{Art: 382, Palette: 1, Scale: 75%, Blend: Add, Sound: 15055, Flags: overlay_f | animates, Light: 3} // Cast 15055
 {491}{}	// Projectile
-{492}{Art: 205, Palette: 1, Scale: 100%, Blend: Add, Sound: 18055, Flags: overlay_f | animates, Light: 1, Light Color:  (150 @ 150 @ 150)}	// Destination
-{493}{}	// Secondary Destination
+{492}{Art: 389, Palette: 1, Scale: 100%, Blend: Add, Sound: 20055, Flags: overlay_f | animates, Light: 8}
+{493}{Art: 222, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color:  (255 @ 50 @ 50)}	// Secondary Destination
 {494}{}	// Secondary Casting
 
 
@@ -576,26 +579,26 @@
 
 // College: [Summon] ------
 
-// 70 -- Plague of Insects
-{700}{Art: 328, Palette: 1, Scale: 100%, Blend: Add, Sound: 23010, Flags: overlay_f | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Cast
+// 70 -- Crimson Tiger's Roar
+{700}{Sound: 410} // Cast 410
 {701}{}	// Projectile
-{702}{Art: 299, Palette: 1, Scale: 100%, Blend: Add, Sound: 23015, Flags: overlay_fb | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Destination
-{703}{Art: 300, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_fb | animates | anim_forever}	// Secondary Destination
+{702}{Sound: 425} // Destination
+{703}{}	// Secondary Destination
 {704}{}	// Secondary Casting
 
-// 71 -- Orcish Champion
-{710}{Art: 293, Palette: 1, Scale: 75%, Blend: Add, Sound: 23020, Flags: overlay_fb | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Cast
+// 71 -- Demonic Armor
+{710}{Art: 327, Palette: 1, Scale: 75%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 2, Light Color:  (50 @ 50 @ 255)}	// Cast
 {711}{}	// Projectile
-{712}{Art: 306, Palette: 1, Scale: 100%, Blend: Add, Sound: 23025, Flags: overlay_fb | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Destination
-{713}{}	// Secondary Destination
-{714}{}	// Secondary Casting
+{712}{Art: 428, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color:   (150 @ 150 @ 150)}		// Destination
+{713}{Art: 428, Palette: 1, Scale: 125%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color:   (150 @ 150 @ 150)}	// Secondary Destination
+{714}{Sound: 363}	// Secondary Casting
 
-// 72 -- Guardian Ogre
-{720}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Cast
-{721}{}	// Projectile
-{722}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Sound: 23035, Flags: overlay_fb | animates, Light:3, Light Color:  (50 @ 50 @ 255)}	// Destination
-{723}{}	// Secondary Destination
-{724}{}	// Secondary Casting
+// 72 -- Infernal Tiger's Fury
+{720}{Art: 196, Palette: 0, Scale: 100%, Blend: Add, Sound: 416, Flags: overlay_fb | animates} // Cast 416
+{721}{Sound: 13020}	// Projectile
+{722}{Art: 426, Palette: 1, Scale: 75%, Blend: Add, Sound: 13025, Flags: overlay_fb | animates, Light: 1, Light Color:   (255 @ 50 @ 50)} // Destination
+{723}{Art: 427, Palette: 1, Scale: 125%, Blend: Add, Sound: 544, Flags: overlay_fb | animates, Light: 1, Light Color:   (255 @ 50 @ 50)}	// Secondary Destination
+{724}{Sound: 424}	// Secondary Casting
 
 // 73 -- Hellgate
 {730}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23040, Flags: overlay_fb | animates, Light: 1, Light Color:  (50 @ 50 @ 255)}	// Cast
