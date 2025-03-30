@@ -21,11 +21,11 @@ that will never work because game doesn't recognize hits from armor, only weapon
 
 <h1 align='center'>
   
-## 🎯 New Possible Effects
+## 🎯 New Possible Effects, not in original game.
 - Summoning usable items, such as weapons and armor.
 - Spawning scenery objects with collisions such as rocks, lights or non summon creatures/npcs.
-- On screen teleportation while spawning scenery + affecting/damaging nearby creatures.
-- Summon walls but in a radius instead of a line.
+- On screen teleportation while spawning scenery + affecting/damaging nearby creatures
+- Summon walls but in a radius instead of a line. Or selecting where they actually spawn.
 - Reused art assets from nonspell effects to create new ones.
 
 <p>Note: While some spells have simple structure, they are made unique through the use of their visual effects.</p>
