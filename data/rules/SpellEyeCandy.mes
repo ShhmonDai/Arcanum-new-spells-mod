@@ -218,16 +218,16 @@
 {230}{Art: 91, Palette: 1, Scale: 75%, Blend: Add, Sound: 13034, Flags: overlay_fb | animates, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Cast
 {231}{}	// Projectile
 {232}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 13025, Flags: overlay_f | animates, Light: 3, Light Color:  (242 @ 165 @ 0)}	// Destination
-{233}{Art: 98, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Secondary Destination
+{233}{Art: 96, Palette: 1, Scale: 150%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 3, Light Color:  (0 @ 96 @ 204)}	// Secondary Destination
 {234}{}	// Secondary Casting
 
 
-// 24 -- Call Fire Elemental
-{240}{Art: 91, Palette: 1, Scale: 150%, Blend: Add, Sound: 13050, Flags: overlay_fb | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Cast
+// 24 -- Inferno
+{240}{Art: 91, Palette: 1, Scale: 150%, Blend: Add, Sound: 13034, Flags: overlay_fb | animates, Light: 2, Light Color:  (242 @ 165 @ 0)}	// Cast 20055
 {241}{}	// Projectile
-{242}{Art: 105, Palette: 1, Scale: 100%, Blend: Add, Sound: 13055, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Destination
-{243}{}	// Secondary Destination
-{244}{}	// Secondary Casting
+{242}{Art: 48, Palette: 1, Scale: 150%, Blend: Add, Sound: 20055, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
+{243}{Art: 98, Palette: 1, Scale: 150%, Blend: Add, Sound: 13025, Flags: overlay_f | animates, Light: 3, Light Color:   (242 @ 165 @ 0)}	// Secondary Destination
+{244}{Art: 96, Palette: 1, Scale: 200%, Blend: Add, Sound: 13035, Flags: overlay_fb | animates, Light: 3, Light Color:  (0 @ 96 @ 204)}	// Secondary Casting
 
 
 // College: [Water] ------
@@ -406,11 +406,11 @@
 {473}{}	// Secondary Destination
 {474}{}	// Secondary Casting
 
-// 48 -- Jump
+// 48 -- AAA
 {480}{Art: 396, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}	// Cast
 {481}{}	// Projectile
-{482}{Art: 369, Palette: 1, Scale: 100%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Destination
-{483}{Art: 369, Palette: 1, Scale: 50%, Blend: Add, Flags: overlay_f | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
+{482}{}	// Destination
+{483}{}	// Secondary Destination
 {484}{Sound: 8808}	// Secondary Casting
 
 
@@ -418,7 +418,7 @@
 {490}{Art: 382, Palette: 1, Scale: 75%, Blend: Add, Sound: 15055, Flags: overlay_f | animates, Light: 3} // Cast 15055
 {491}{}	// Projectile
 {492}{Art: 389, Palette: 1, Scale: 100%, Blend: Add, Sound: 20055, Flags: overlay_f | animates, Light: 8}
-{493}{Art: 222, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color:  (255 @ 50 @ 50)}	// Secondary Destination
+{493}{Art: 222, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color:  (255 @ 50 @ 50)}	// Secondary Destination
 {494}{}	// Secondary Casting
 
 
@@ -748,10 +748,10 @@
 {923}{}	// Secondary Destination
 {924}{}	// Secondary Casting
 
-// 93 -- MI: Slaying Strength
+// 93 -- MI: Flame Sword
 {930}{}	// Cast
 {931}{}	// Projectile
-{932}{}	// Destination
+{932}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 13035, Flags: overlay_f | animates, Light: 2, Light Color:   (242 @ 165 @ 0)}	// Destination
 {933}{}	// Secondary Destination
 {934}{}	// Secondary Casting
 

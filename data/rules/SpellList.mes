@@ -391,16 +391,26 @@
 {2165}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
 
 
-// 24 -- Call Fire Elemental
-{2200}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
-{2201}{Cost: 50, Maintain: (5 @ 10)}
-{2204}{AI_Summon: 8}
-{2205}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28312}
-{2206}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
-{2207}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
-{2208}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
-{2209}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
-{2210}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+// 24 -- Inferno
+{2200}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_No_T_Wall, [Begin]Radius: 2, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2201}{Cost: 50, Duration: (1 @ -1), Resist: (stat_constitution @ -10), Info: aggressive}
+{2204}{AI_Offensive: 17}
+{2205}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Fire, Dmg: 45-70, Dmg_Flags: Scaled | Crippling}
+{2206}{[Begin], AoE: Tgt_Tile_Radius, Type: Summon, Proto: 4031} 
+{2207}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{2208}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add}
+{2209}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 4, Add}
+{2210}{[End], Type: EyeCandy, 2, Remove}
+{2211}{[End], Type: EyeCandy, 3, Remove}
+{2212}{[End], Type: EyeCandy, 4, Remove}
+{2213}{[End], Type: EyeCandy, 3, Add, Play: Reverse | End_Callback} // Dissipating
+{2214}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2215}{[Callback], Type: EyeCandy, 2, Remove}
+{2216}{[Callback], Type: EyeCandy, 3, Remove}
+{2217}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{2218}{[EndCallback], Type: EyeCandy, 2, Remove}
+{2219}{[EndCallback], Type: EyeCandy, 3, Remove}
+
 
 
 // College: [Water] ------
@@ -706,27 +716,25 @@
 {3350}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
 {3351}{Cost: 10, Maintain: (1 @ 10), Info: aggressive}
 {3354}{AI_Offensive: 11}
-{3355}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 8293} //8176 gauntlets 8293
+{3355}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 6200} //8176 or gauntlets-8293 keep in mind to subtract 20 from actual proto number 6200 is sword 
 {3356}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
 {3357}{[End], Type: EyeCandy, 2, Remove}
 {3358}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
 {3359}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
 {3360}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
 
-// 48 -- Jump
-{3400}{AoE: Tgt_Self | Tgt_Tile_Empty | Tgt_Tile_Pathable_To, Radius: 1, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, [EndCallback]AoE: Tgt_Summoned}
-{3401}{Cost: 20, Maintain: (1 @ 10), Info: aggressive}
-{3404}{AI_Flee: 4}
-{3405}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}
-{3406}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4016}
-{3407}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4014}  
-{3408}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
-{3409}{[Callback], Apply_AoE: Tgt_Obj_Radius, Type: EyeCandy, 2, Add}
-{3410}{[Callback], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knock_down}
-{3411}{[Callback], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: Damage, DmgType: Dmg_Normal, Dmg: 20-25, Dmg_Flags: Scaled}
-{3412}{[End], Type: EyeCandy, 3, Add, Play: Reverse | End_Callback} // Dissipating
-{3413}{[End], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
-{3414}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+// 48 -- AAA
+{3400}{AoE: Tgt_Self, [Begin]AoE: Tgt_Tile_Radius | Tgt_Tile_Empty, [Begin]Radius: 1, [Callback]Radius: 2, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{3401}{Cost: 10, Maintain: (1 @ 10), Info: aggressive}
+{3404}{AI_Offensive: 11}
+{3405}{[Begin], AoE: Tgt_Self | Tgt_Tile_Empty, Type: Summon, Proto: 8293} //8176 gauntlets 8293
+{3406}{[Begin],AoE: Tgt_Self | Tgt_Tile_Empty, Radius: 2, Type: Summon, Proto: 8293} //8176 gauntlets 8293
+{3407}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{3408}{[End], Type: EyeCandy, 2, Remove}
+{3409}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{3410}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{3411}{[Callback],AoE: Tgt_Self | Tgt_Tile_Empty, Type: Summon, Proto: 4032} //8176 gauntlets 8293
+{3412}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
 
 
 // 49 -- Body Ascendance
@@ -740,7 +748,7 @@
 {3458}{[Begin], AoE: Tgt_Self, Type: Effect, 282, Add, Count: 8} // increase max fatique by 50%
 {3459}{[Begin], AoE: Tgt_Self, Type: Heal, DmgType: Dmg_Magic, Dmg: 25} //heal fatigue 25
 {3460}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 2, Add}
-{3461}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add, Play: Stack}
+{3461}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add}
 {3462}{[Maintain], AoE: Tgt_Self, Type: Heal, DmgType: Dmg_Magic, Dmg: 2-10} //Constant fatigue healing
 {3463}{[Maintain], AoE: Tgt_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-5} //Constant health damage
 {3464}{[End], AoE: Tgt_Self, Type: Effect, 279, Remove, Count: 8}
@@ -1253,13 +1261,14 @@
 {5605}{[Begin], Type: EyeCandy, 2, Add}
 {5606}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 1-6}
 
-// 93 -- Slaying Strength
+// 93 -- Flame Sword
 // Note: Could limit this by attacker type? (Undead, etc.)
-{5650}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
-{5651}{Duration: (8 @ -1), Info: friendly}
-{5653}{No_Stack: 1, ItemTriggers: Parent_Hit | Parent_Atks_Opponent}
-{5655}{[Begin], ItemTriggers: Parent_Hit | Parent_Atks_Opponent, Type: Effect, 152, Add}
-{5656}{[End], ItemTriggers: Parent_Hit | Parent_Atks_Opponent, Type: Effect, 152, Remove}
+{5650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [Begin]Radius: 2, [End]AoE: Tgt_Object}
+{5651}{Cost: 0, Info: aggressive}
+{5653}{No_Stack: 0, ItemTriggers: Target_Hit | Target_Attacker}
+{5655}{[Begin], ItemTriggers: Target_Hit | Target_Attacker, Type: Damage, DmgType: Dmg_Fire, Dmg: 1-20 | Scaled}
+{5656}{[Begin], ItemTriggers: Target_Hit | Target_Attacker, Type: EyeCandy, 2, Add}
+
 
 // 94 -- Hammer of the Earth
 {5700}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}

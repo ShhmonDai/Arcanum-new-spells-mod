@@ -25,7 +25,7 @@
 {21}{Fiery Shift}
 {22}{Fireflash}
 {23}{Sea of Flames}
-{24}{Call Fire Elemental}
+{24}{Inferno}
 {25}{Purity of Water}
 {26}{Call Fog}
 {27}{Squall of Ice}
@@ -103,7 +103,7 @@
 {90}{MI: Harm Undead}
 {91}{MI: UNUSED} Area Fear Undead ***
 {92}{MI: Holy Smiting}
-{93}{MI: Slaying Strength (Passive: Parent Atks or Hit by Target)}
+{93}{MI: Flaming Hit (Passive: Cast On Hit)}
 {94}{MI: Hammer of the Earth (Passive: Wield)}
 {95}{MI: Axe of the Winds (Passive: Wield)}
 {96}{MI: Dagger of Pain (Passive: Wield)}
