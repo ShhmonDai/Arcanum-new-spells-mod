@@ -115,10 +115,10 @@
 
 // College: [Air] ------
 
-// 10 -- Vitality of Air
-{100}{Art: 47, Palette: 1, Scale: 50%, Blend: Add, Sound: 11010, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
+// 10 -- Sword of Air
+{100}{Art: 427, Palette: 1, Scale: 75%, Blend: Add, Sound: 11020, Flags: overlay_f | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {101}{}	// Projectile
-{102}{Art: 362, Palette: 1, Scale: 100%, Blend: Add, Sound: 11015, Flags: overlay_f | animates | anim_forever}	// Destination
+{102}{Art: 68, Palette: 1, Scale: 75%, Blend: Add, Sound: 4000, Flags: overlay_f | animates, Light: 1, Light Color:   (150 @ 150 @ 150)}	// Destination
 {103}{}	// Secondary Destination
 {104}{}	// Secondary Casting
 
@@ -132,23 +132,23 @@
 // 12 -- Whirlwind
 {120}{Art:47, Palette: 1, Scale: 75%, Blend: Add, Sound: 11000, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {121}{}	// Projectile
-{122}{Art:48, Palette: 1, Scale: 50%, Blend: Add, Sound: 11015, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
+{122}{Art: 369, Palette: 1, Scale: 200%, Blend: Add, Sound: 11050, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Destination 11015
 {123}{Art: 48, Palette: 1, Scale: 150%, Blend: Add, Sound: 8827, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Destination
-{124}{}	// Secondary Casting
+{124}{Sound: 12055}	// Secondary Casting
 
-// 13 -- Body of Air
+// 13 -- Sky Hammer
 {130}{Art:47, Palette: 1, Scale: 100%, Blend: Add, Sound: 11040, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {131}{}	// Projectile
-{132}{Art: 59, Palette: 1, Scale: 100%, Blend: Add, Sound: 11045, Flags: overlay_f | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
-{133}{}	// Secondary Destination
-{134}{}	// Secondary Casting
+{132}{Art: 48, Palette: 1, Scale: 100%, Blend: Add, Sound: 11000, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
+{133}{Art: 48, Palette: 1, Scale: 100%, Blend: Add, Sound: 11000, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Destination
+{134}{Art: 369, Palette: 1, Scale: 100%, Blend: Add, Sound: 11050, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Secondary Casting
 
-// 14 -- Call Air Elemental
-{140}{Art: 47, Palette: 1, Scale: 125%, Blend: Add, Sound: 11050, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
+// 14 -- Tornado
+{140}{Art: 47, Palette: 1, Scale: 150%, Blend: Add, Sound: 11050, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {141}{}	// Projectile
-{142}{Art: 59, Palette: 1, Scale: 100%, Blend: Add, Sound: 11058, Flags: overlay_f | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
-{143}{}	// Secondary Destination
-{144}{}	// Secondary Casting
+{142}{Art: 59, Palette: 1, Scale: 100%, Blend: Add, Sound: 11050, Flags: overlay_f | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Destination
+{143}}{Art: 369, Palette: 1, Scale: 200%, Blend: Add, Sound: 11050, Flags: overlay_f | animates, Light: 1, Light Color:   (242 @ 165 @ 0)}	// Secondary Destination
+{144}{Art: 48, Palette: 1, Scale: 150%, Blend: Add, Sound: 11050, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}
 
 
 // College: [Earth] ------
@@ -172,7 +172,7 @@
 {170}{Art: 47, Palette: 1, Scale: 25%, Blend: Add, Sound: 12058, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Cast
 {171}{}	// Projectile
 {172}{Art: 369, Palette: 2, Scale: 150%, Blend: Add, Sound: 8507, Flags: overlay_f | animates, Light: 3, Light Color:   (242 @ 165 @ 0)}// Destination   8808 generic explosion, 8507 engine explosion
-{173}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
+{173}{Art: 85, Palette: 1, Scale: 50%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 3, Light Color:  (201 @ 164 @ 64)}	// Secondary Destination
 {174}{Art: 47, Palette: 1, Scale: 25%, Blend: Add, Sound: 11025, Flags: overlay_fb | animates, Light: 1, Light Color:  (108 @ 238 @ 242)}	// Secondary Casting
 
 // 18 -- Leaping Smash

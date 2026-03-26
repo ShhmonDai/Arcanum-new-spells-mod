@@ -139,34 +139,19 @@
 
 // College: [Air] ------
 
-// 11 -- Wind Walk
--1550--AoE: Tgt_Self-
--1551--Cost: 5, Maintain: (1 @ 10)- //, Disabled: 1-
--1553--Cancels_SF: OSF_FLOATING-
--1555--[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_FLOATING, FLAG_ON-
--1556--[Begin], Type: AGoal, anim_goal_floating-
--1557--[Begin], Type: EyeCandy, 2, Add-
--1558--[Begin], Type: EyeCandy, 3, Add, Play: Stack-
--1559--[End], Type: ObjFlag, obj_f_spell_flags, OSF_FLOATING, FLAG_OFF-
--1560--[End], Type: EyeCandy, 3, Remove-
--1561--[End], Type: AGoalTerminate, anim_goal_floating-
--1562--[End], Type: EyeCandy, 2, Add, Play: Reverse- // Dissipating
-// Here we could have another anim_goal to float down to the ground...
+// 10 -- Sword of Air
+{1500}{AoE: Tgt_Object | Tgt_Obj_No_Self} // Missile
+{1501}{Cost: 5, Resist: (stat_constitution @ -5), Info: aggressive}
+{1502}{Missile: 0}
+{1504}{AI_Offensive: 1}
+{1505}{[Begin], AoE: Tgt_Object, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-15, Dmg_Flags: Scaled}
+{1506}{[Begin], AoE: Tgt_Object, Type: EyeCandy, 2, Add}
 
-// 10 -- Vitality of Air
-{1500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
-{1501}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
-{1503}{No_Stack: 0}
-{1504}{AI_Defensive: (2 @ 0)}
-{1505}{[Begin], Type: Effect, 160, Add, Count: 4}  // raises Constitution
-{1506}{[Begin], Type: EyeCandy, 2, Add}
-{1507}{[End], Type: Effect, 160, Remove, Count: 4}
-{1508}{[End], Type: EyeCandy, 2, Remove}  // Make sure it wasn't in the process of beginning
 
 // 11 -- Poison Vapours
 // Note: Radius *was* 2!!!
 {1550}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
-{1551}{Cost: 10, Maintain: (5 @ 10), Resist: (stat_constitution @ 0), Info: aggressive}
+{1551}{Cost: 10, Maintain: (5 @ 2), Resist: (stat_constitution @ 0), Info: aggressive}
 //Maintain: (1 @ 5)
 {1554}{AI_Offensive: 14}
 {1555}{[Begin], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Poison, Dmg: 15-50, Dmg_Flags: Scaled}  // 1-4
@@ -193,33 +178,46 @@
 {1609}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add}
 
 
-// 13 -- Body of Air
-{1650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
-{1651}{Cost: 25, Maintain: (2 @ 10)}
-{1653}{Disallowed_TSF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED}
-{1654}{AI_Flee: 3, AI_Defensive: (14 @ 0)}
-{1655}{[Begin], Type: Trait, art_num, 28, Palette: 1}
-{1656}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_AIR, FLAG_ON}
-{1657}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_ON}
-{1658}{[Begin], Type: Effect, 51, Add}
-{1659}{[Begin], Type: EyeCandy, 2, Add}
-{1660}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_AIR, FLAG_OFF}
-{1661}{[End], Type: Trait, art_num, -1}
-{1662}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_OFF}
-{1663}{[End], Type: Effect, 51, Remove}
-{1664}{[End], Type: EyeCandy, 2, Remove}
-{1665}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+// 13 -- Sky Hammer
+{1650}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Non_Party_Critters}
+{1651}{Cost: 15, Maintain: (1 @ 2), Resist: (stat_constitution @ 0), Info: aggressive}
+{1654}{AI_Offensive: 11}
+{1655}{[Begin], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-5}
+{1656}{[Begin], AoE: Tgt_Obj_Radius, Type: AGoal, anim_goal_knock_down}
+{1657}{[Begin], AoE: Tgt_Obj_Radius, Type: EyeCandy, 4, Add}
+{1658}{[Begin], AoE: Tgt_Obj_Radius, Type: EyeCandy, 2, Add}
+{1659}{[Maintain], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-5}
+{1660}{[Maintain], AoE: Tgt_Obj_Radius, Type: AGoal, anim_goal_knock_down}
+{1661}{[Maintain], AoE: Tgt_Obj_Radius, Type: EyeCandy, 2, Add}
+{1662}{[Maintain], AoE: Tgt_Obj_Radius, Type: EyeCandy, 4, Add}
+{1663}{[End], AoE: Tgt_Obj_Radius, Type: EyeCandy, 2, Add, Play: Reverse}
 
-// 14 -- Call Air Elemental
-{1700}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
-{1701}{Cost: 50, Maintain: (5 @ 10)}
-{1704}{AI_Summon: 10}
-{1705}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28310}
-{1706}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
-{1707}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
-{1708}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
-{1709}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
-{1710}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// 14 -- Tornado
+{1700}{AoE: Tgt_List, [Begin]AoE: Tgt_Self | Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Non_Party_Critters, [Begin]Radius:6}
+{1701}{Cost: 50, Maintain: (1 @ 1), Resist: (stat_constitution @ 0), Info: aggressive}  //, Info: aggressive
+{1703}{No_Stack: 1}
+{1704}{AI_Defensive: (5 @ 1)}
+{1705}{[Begin], AoE: Tgt_Obj_No_Self, Type: Effect, 57, Add}  // halve speed
+{1706}{[Begin], AoE: Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 5-10, Dmg_Flags: Scaled}
+{1707}{[Begin], AoE: Tgt_Obj_No_Self, Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_ON} 
+{1708}{[Begin], AoE: Tgt_Obj_No_Self, Type: AGoal, anim_goal_knockback}
+{1709}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add}
+{1710}{[Begin], AoE: Tgt_Self, Type: ObjFlag, obj_f_spell_flags, OSF_MAGNETIC_INVERSION, FLAG_ON}
+{1711}{[Maintain], AoE: Tgt_Self, Type: EyeCandy, 4, Add}
+{1712}{[Maintain], AoE: Tgt_Self, Type: EyeCandy, 2, Add}
+{1713}{[Maintain], AoE: Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 5-10, Dmg_Flags: Scaled} 
+{1714}{[Maintain], AoE: Tgt_Obj_No_Self, Type: AGoal, anim_goal_knockback}
+{1715}{[End], AoE: Tgt_Self, Type: ObjFlag, obj_f_spell_flags, OSF_MAGNETIC_INVERSION, FLAG_OFF}
+{1716}{[End], AoE: Tgt_Self, Type: EyeCandy, 3, Add, Play: Reverse}
+{1717}{[End], AoE: Tgt_Self, Type: EyeCandy, 4, Remove}
+{1718}{[End], AoE: Tgt_Self, Type: EyeCandy, 3, Remove}
+{1719}{[End], AoE: Tgt_Obj_No_Self, Type: EyeCandy, 2, Remove}
+{1720}{[End], AoE: Tgt_Obj_No_Self, Type: Effect, 57, Remove}
+{1721}{[End], AoE: Tgt_Obj_No_Self, Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_OFF} 
+
 
 
 // College: [Earth] ------
@@ -458,27 +456,21 @@
 
 
 // 27 -- Squall of Ice
-// Note: Radius WAS 2
-//-2350--AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned-
 {2350}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
 {2351}{Cost: 15, Maintain: (5 @ 10), Resist: (stat_constitution @ -5)}
-//Maintain: (1 @ 5)
 {2354}{AI_Offensive: 11}
-{2355}{[Begin], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 3-12, Dmg_Flags: Scaled}
+{2355}{[Begin], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-1, Dmg_Flags: Scaled}
 {2356}{[Begin], AoE: Tgt_Tile_Radius, Type: Summon, Proto: 4034}
 {2357}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
 {2358}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start | Ice_Dmg}
-//-2359--[Maintain], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-12, Dmg_Flags: Scaled-
 {2359}{[Maintain], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-1, Dmg_Flags: Scaled}
-// Note: Does this handle *all* summoned objects?  Sure seems to...
-// Do extra damage versus Fire Elementals/Body of Fire
-{2360}{[Maintain], AoE: Tgt_Obj_Radius, AoE_SF: OSF_BODY_OF_FIRE, Type: Damage, DmgType: Dmg_Normal, Dmg: 3-12}
+{2360}{[Maintain], AoE: Tgt_Obj_Radius, AoE_SF: OSF_BODY_OF_FIRE, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-1}
 {2361}{[End], Type: EyeCandy, 2, Remove}
 {2362}{[End], Type: EyeCandy, 3, Remove}
 {2363}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
 {2364}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
 {2365}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
-// Note: SHOULD DMG_TYPE be DMG_COLD?
+
 
 // 28 -- Body of Water
 {2400}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
